@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student marks list</title>
+</head>
+
+<body>
+    <table border="4">
+        <thead>
+            <h1>student list</h1>
+            <tr>
+                <th>s.no</th>
+                <th>student name</th>
+                <th>number</th>
+                <th>marks</th>
+            </tr>
+        </thead>
+        <tbody id="student-list">
+            <tr>
+                <td>1.</td>
+                <td>tushar</td>
+                <td>7983033154</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let data = [{ name: "shiv", number: 3453435534, max: 77 },
+        { name: "tushar", number: 3453445634, max: 89 },
+        { name: "sachin", number: 46346455534, max: 57 },
+        { name: "anshu", number: 33745435534, max: 47 },
+        { name: "karan", number: 3456435564, max: 65 }
+        ];
+
+        
+        let tabledata = data.map((ele, i) => {
+            return `<tr>
+        <td>            ${i + 1}</td>
+            <td>${ele.name}</td>
+            <td>${ele.number}</td>
+            <td>${ele.max}</td>
+    </tr>`
+        });
+
+        console.log("tabledate==>", tabledata);
+
+        let tablelist = document.getElementById('student-list');
+
+        tablelist.innerHTML = `
+${tabledata.map((ele) => {
+            return ele
+        })}`  
+    </script>
+</body>
+
+</html>
