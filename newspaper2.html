@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: gold;
+        }
+        /* Styling for the element with the fly-in effect */
+        
+        .fly-in {
+            font-size: 24px;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            transform: translateX(-100%);
+            /* Start position off-screen */
+            animation: flyIn 4s forwards;
+            /* Apply the animation */
+        }
+        /* Keyframes for the fly-in animation */
+        
+        @keyframes flyIn {
+            from {
+                transform: translateX(-400%);
+                /* Start from off-screen on the left */
+            }
+            to {
+                transform: translateX(0);
+                /* End at the original position */
+            }
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        header {
+            background: black;
+            color: gold;
+            padding-top: 80px;
+            min-height: 80px;
+            border-bottom: groove 6px solid;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-style: inherit;
+            font-size: medium;
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        .news-article {
+            background: yellow;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .news-article h2 {
+            background-color: white;
+            font-style: initial;
+            margin-top: 0;
+        }
+        
+        .news-article p {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px 0;
+        }
+        
+        footer {
+            background: black;
+            color: whitesmoke;
+            font-size: x-large;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="fly-in">
+            <h1>TS News</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="news-article">
+            <h2>"Bhai-Lang", New Programming Language By 2 Indians, Amuses Internet TS News</h2>
+            <p><strong>Published on:</strong> September 5, 2024</p>
+            <p>A new programming language is taking the internet by storm. “Bhai-lang” is a toy programming language created by two Indian developers - Aniket Singh from Amazon and Rishabh Tripathi from Groww. “Bhai” is Indian word for brother. It is written
+                in Typescript and combines “bhai” from Hindi language with hi, bye and other words in English.</p>
+        </div>
+        <img src="assets/tjmtu51_bhai-lang-650_625x300_21_March_22.jpg" width="500" height="auto">
+        <div class="news-article">
+            <h2>Vodafone Idea Enters Mobile Gaming Market With Vi Games Service
+            </h2>
+            <p><strong>Published on:</strong> September 5, 2024</p>
+            <p>Vi Games brings mobile games based on genres, namely Action, Adventure, Arcade, Casual, Education, Fun, Puzzle, Racing, Sports, and Strategy. There are also games based on Disney cartoons and movies, such as Big Hero 6 Bot Fight, Castle of
+                Illusion, Ducktales Remastered, and Disney Kickoff, among others.</p>
+            <img src="assets/vi_games_image_1647248397608.jpg" width="500" height="auto">
+        </div>
+
+        <div class="news-article">
+            <h2>Copilot X heralds a new era of AI-powered coding</h2>
+            <p><strong>Published on:</strong> September 5, 2024</p>
+            <p>GitHub has unveiled Copilot X, an upgraded version of its AI-powered coding assistance tool. Copilot X adopts OpenAI’s latest GPT-4 model and now features chat and voice interfaces, support for pull requests, command-line support, and can
+                generate answer questions from documentation.</p>
+            <img src="assets/github-copilot-x-gpt-4-ai-artificial-intelligence-openai-coding-programming-350x186.jpg" width="500" height="auto">
+
+        </div>
+
+        <div class="news-article">
+            <h2>Apple is giving iOS apps which handle real cash in an HTML5 wrapper a bit longer to transition to native</h2>
+            <p><strong>Published on:</strong> September 5, 2024</p>
+            <p>Apple is giving iOS developers whose apps use HTML5 containers and deal with real cash, six months longer to make them fully-native. The new rules were first announced on June 3rd. Here’s what the guidelines said: “HTML5 games distributed
+                in apps may not provide access to real money gaming, lotteries, or charitable donations, and may not support digital commerce.</p>
+            <img src="assets/download (1).jpg" width="500" height="auto">
+        </div>
+
+        <div class="news-article">
+            <h2>
+                Big Viking Games raises $21.75m, continues to bet on HTML5 mobile gaming</h2>
+            <p><strong>Published on:</strong> September 5, 2024</p>
+            <p>
+                Picture credit: "HTML5 Logo On Screen", by "David Martyn Hunt", used under CC BY / Modified from original Big Viking Games, a Canada-based independent mobile and self-published game studio and pioneer in HTML5 mobile games, has secured a total of $21.75
+                million (£17.4m) in funding from Royal Bank of Canada (RBC), Export Development Canada (EDC) and BDC Capital. The gaming house is looking to secure more financing aiming to raise at least...</p>
+            <img src="assets/html5_XFSSk9E-350x183.png" width="500" height="auto">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TS News. All Rights Reserved.</p>
+        <p>created by tushar shukla</p>
+    </footer>
+</body>
+
+</html>
