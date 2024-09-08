@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        section {
+            background-color: silver;
+            font-size: x-large;
+            transform-style: preserve-3d;
+        }
+        
+        header,
+        footer {
+            background-color: chocolate;
+            padding: 20px;
+        }
+        
+        main {
+            margin: 20px 0;
+        }
+        
+        .sidebar {
+            background-color: black;
+            padding: 10px;
+        }
+        
+        figure {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TS HTML Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <address>
+        <p><strong>tushar shukla</strong><br>
+           Email: <a href="https://mail.google.com/mail/u/0/#inbox">shuklat726@gmail.com</a><br>
+           Address:kosi khurd mathura uttarpardesh (281005)</p>
+    </address>
+
+    <main>
+        <section id="about MERN stck">
+            <h2>About MERN stack</h2>
+            <article>
+                <h3>The MERN Stack</h3>
+                <p>The MERN stack is a powerful set of technologies used for building full-stack web applications. It consists of MongoDB, Express.js, React, and Node.js. Each component plays a crucial role in creating a seamless and efficient development
+                    process:
+                </p>
+                <ul>
+                    <li><strong>MongoDB</strong>: A NoSQL database that stores data in a flexible, JSON-like format.</li>
+                    <li><strong>Express.js</strong>: A web application framework for Node.js, facilitating server-side development.</li>
+                    <li><strong>React</strong>: A front-end library for building interactive user interfaces.</li>
+                    <li><strong>Node.js</strong>: A JavaScript runtime that enables server-side scripting and development.</li>
+                </ul>
+                <p>Combining these technologies allows developers to use JavaScript across the entire stack, resulting in a more unified and efficient workflow.</p>
+
+                <aside>
+                    <p>The MERN stack is favored for its scalability and the ability to build high-performance applications quickly. It's popular among developers for creating dynamic, modern web applications.</p>
+                </aside>
+            </article>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Definition List</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language, the standard language for creating web pages.</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets, used for styling web pages.</dd>
+                <dt>JavaScript</dt>
+                <dd>A programming language that allows for dynamic content on web pages.</dd>
+            </dl>
+        </section>
+        <hr>
+        <section>
+            <h2>Table</h2>
+            <table border="20">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>tushar</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>anuj</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>rajat</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>sumit</td>
+                        <td>d</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Image of html</h2>
+            <figure>
+                <img src="assets/html5_XFSSk9E-350x183.png" html>
+                <figcaption>html 5.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Video</h2>
+            <video width="320" height="240" controls>
+                <source src="assets/VID_86631113_213838_743.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <canvas id="myCanvas" width="400" height="500"></canvas>
+            <script>
+                const canvas = document.getElementById('myCanvas');
+                const ctx = canvas.getContext('2d');
+
+                const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00'];
+                const size = 80;
+                const offset = 100;
+                let angle = 0;
+
+                function drawSquare(x, y, size, color) {
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(angle);
+                    ctx.fillStyle = color;
+                    ctx.fillRect(-size / 2, -size / 2, size, size);
+                    ctx.restore();
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    const centerX = canvas.width / 2;
+                    const centerY = canvas.height / 2;
+
+                    colors.forEach((color, i) => {
+                        const currentAngle = angle + (i * Math.PI / 2);
+                        const x = centerX + offset * Math.cos(currentAngle);
+                        const y = centerY + offset * Math.sin(currentAngle);
+                        drawSquare(x, y, size, color);
+                    });
+
+                    angle += 0.02;
+                    requestAnimationFrame(animate);
+                }
+
+                animate();
+            </script>
+
+        </section>
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Please give me feedback of my web page in rating 1 to 1000</h2>
+            <blockquote>
+                <input type="number">
+                <button type="submit">submit</button>
+            </blockquote>
+        </section>
+    </main>
+
+    <aside>
+        <p>For more information about web development checkout <a href=" https://www.skillyards.com/ ">skillyards</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 tushar shukla. All rights reserved.</p>
+        <p>Follow me on:
+            <a href="https://www.instagram.com/kingtushar2004?utm_source=qr&igsh=NTJyMmI5NjI1b2s1 " target="_blank ">instagram</a>,
+            <a href="https://www.linkedin.com/in/tushar-shukla-1b2903324/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BkDra7lxCSoeczUAtnZx8nw%3D%3D " target="_blank ">linkedin</a>
+        </p>
+        </footer>
+
+        <noscript>
+        <p>JavaScript is used in this webpage. Some features of this site may not work properly.</p>
+    </noscript>
+</body>
+
+</html>
