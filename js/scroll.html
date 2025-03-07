@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Event</title>
+    <style>
+        body {
+            background-color: blue;
+            height: 200vh; 
+            margin: 0;
+        }
+
+        h1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);   
+            color: black;
+            font-size: 50px;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>tushar shukla</h1>
+
+    <script>
+        function debounce(cb, delay) {
+            let id;
+            return function (...args) {
+                clearTimeout(id);
+                id = setTimeout(() => cb(...args), delay);
+            };
+        }
+
+        function handleScroll() {
+            console.log('Scrolled!', window.scrollY);
+        }
+
+        const debounceHandleScroll = debounce(handleScroll, 1000);
+        
+        window.addEventListener('scroll', debounceHandleScroll,scrollY);
+
+        // for (let i = 0; i < 10; i++) {
+        //     setTimeout(() => {
+        //         console.log(i);
+        //     }, 1000 * i);
+        // }
+    </script>
+</body>
+</html> -->
+
+
+
+
